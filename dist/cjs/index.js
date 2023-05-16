@@ -536,7 +536,7 @@ var PrismaZoom = (0, react_1.forwardRef)(function (props, forwardedRef) {
             }
         };
     }, [allowWheel, allowZoom, allowPan]);
-    var attr = __assign(__assign({}, divProps), { ref: ref, onDoubleClick: handleDoubleClick, style: __assign(__assign({}, divProps.style), { cursor: cursor, willChange: 'transform', transition: "transform ease-out ".concat(transitionRef.current, "s"), touchAction: allowParentPanning && zoomRef.current === 1 ? 'pan-x pan-y' : 'none', transform: "translate3d(".concat(posRef.current[0], "px, ").concat(posRef.current[1], "px, 0) scale(").concat(zoomRef.current, ")") }) });
+    var attr = __assign(__assign({}, divProps), { ref: ref, onDoubleClick: handleDoubleClick, style: __assign({ cursor: cursor, willChange: 'transform', transition: "transform ease-out ".concat(transitionRef.current, "s"), touchAction: allowParentPanning && zoomRef.current === 1 ? 'pan-x pan-y' : 'none', transform: "translate3d(".concat(posRef.current[0], "px, ").concat(posRef.current[1], "px, 0) scale(").concat(zoomRef.current, ")") }, divProps.style) });
     return (0, jsx_runtime_1.jsx)("div", __assign({}, attr, { children: children }));
 });
 exports.default = PrismaZoom;
