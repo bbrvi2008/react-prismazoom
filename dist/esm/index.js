@@ -533,7 +533,7 @@ var PrismaZoom = forwardRef(function (props, forwardedRef) {
                 refCurrentValue === null || refCurrentValue === void 0 ? void 0 : refCurrentValue.removeEventListener('touchcancel', handleTouchStop);
             }
         };
-    }, []);
+    }, [allowWheel, allowZoom, allowPan]);
     var attr = __assign(__assign({}, divProps), { ref: ref, onDoubleClick: handleDoubleClick, style: __assign(__assign({}, divProps.style), { cursor: cursor, willChange: 'transform', transition: "transform ease-out ".concat(transitionRef.current, "s"), touchAction: allowParentPanning && zoomRef.current === 1 ? 'pan-x pan-y' : 'none', transform: "translate3d(".concat(posRef.current[0], "px, ").concat(posRef.current[1], "px, 0) scale(").concat(zoomRef.current, ")") }) });
     return _jsx("div", __assign({}, attr, { children: children }));
 });
